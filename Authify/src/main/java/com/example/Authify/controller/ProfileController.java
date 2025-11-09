@@ -3,6 +3,7 @@ package com.example.Authify.controller;
 import com.example.Authify.io.ProfileRequest;
 import com.example.Authify.io.ProfileResponse;
 import com.example.Authify.service.ProfileService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +20,7 @@ public class ProfileController {
     private ProfileService profileService;
 
     @PostMapping("/register")
-    public ResponseEntity<ProfileResponse> register(@RequestBody ProfileRequest request){
+    public ResponseEntity<ProfileResponse> register(@Valid @RequestBody ProfileRequest request){
         ProfileResponse response = profileService.createProfile(request);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }

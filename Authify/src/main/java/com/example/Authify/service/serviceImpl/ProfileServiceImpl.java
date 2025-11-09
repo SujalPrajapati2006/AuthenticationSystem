@@ -6,7 +6,9 @@ import com.example.Authify.io.ProfileResponse;
 import com.example.Authify.repository.UserRepository;
 import com.example.Authify.service.ProfileService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.UUID;
 
@@ -19,8 +21,11 @@ public class ProfileServiceImpl implements ProfileService {
     public ProfileResponse createProfile(ProfileRequest request) {
         UserEntity newProfile = convertToUserEntity(request);
 
+        if (!userRepository.existsByEmail(request.getEmail())){
         newProfile = userRepository.save(newProfile);
         return convertToProfileResponse(newProfile);
+        }
+        throw new ResponseStatusException(HttpStatus.CONFLICT,"Email already exists");
     }
 
     private ProfileResponse convertToProfileResponse(UserEntity newProfile) {
