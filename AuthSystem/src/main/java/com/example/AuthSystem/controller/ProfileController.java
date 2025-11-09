@@ -1,8 +1,8 @@
-package com.example.Authify.controller;
+package com.example.AuthSystem.controller;
 
-import com.example.Authify.io.ProfileRequest;
-import com.example.Authify.io.ProfileResponse;
-import com.example.Authify.service.ProfileService;
+import com.example.AuthSystem.io.ProfileRequest;
+import com.example.AuthSystem.io.ProfileResponse;
+import com.example.AuthSystem.service.ProfileService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

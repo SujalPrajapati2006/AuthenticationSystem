@@ -1,10 +1,10 @@
-package com.example.Authify;
+package com.example.AuthSystem;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class AuthifyApplicationTests {
+class AuthSystemApplicationTests {
 
 	@Test
 	void contextLoads() {

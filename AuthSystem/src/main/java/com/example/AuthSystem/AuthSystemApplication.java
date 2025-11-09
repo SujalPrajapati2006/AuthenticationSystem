@@ -1,13 +1,13 @@
-package com.example.Authify;
+package com.example.AuthSystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AuthifyApplication {
+public class AuthSystemApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AuthifyApplication.class, args);
+		SpringApplication.run(AuthSystemApplication.class, args);
 	}
 
 }

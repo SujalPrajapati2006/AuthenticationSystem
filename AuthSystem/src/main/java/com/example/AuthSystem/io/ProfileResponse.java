@@ -1,4 +1,4 @@
-package com.example.Authify.io;
+package com.example.AuthSystem.io;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

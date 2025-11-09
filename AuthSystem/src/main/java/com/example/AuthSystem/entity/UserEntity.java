@@ -1,4 +1,4 @@
-package com.example.Authify.entity;
+package com.example.AuthSystem.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

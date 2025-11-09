@@ -1,4 +1,4 @@
-package com.example.Authify.io;
+package com.example.AuthSystem.io;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;
